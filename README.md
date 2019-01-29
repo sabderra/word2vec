@@ -19,3 +19,13 @@ Then to connect:
 ```bash
 docker exec -it word2vec bash
 ```
+
+First step is to run demo-word.sh to train a word vector model. This can take sometime and it is best to do this in a daemon started container so you don't need to redo.
+```bash
+./demo-word.sh
+```
+
+Afterwards you can play around with the other demo scripts, passing the vectors.bin file created above. E.g.
+```bash
+./word-analogy vectors.bin
+```
